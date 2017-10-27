@@ -11,14 +11,28 @@
       <source src="<?php echo base_url('assetsWeb/videos/video1.mp4')?>" type="video/mp4">
   </video>
   <div class = "container">
-  	<div class ="row">
+  	<div class "row">
   		<nav class =" col-sm-12">
   			<p class = "col-sm-2"><a href = "<?php echo base_url(); ?>about"><strong>About</strong></a></p>
   			<p class = "col-sm-2"><a href = "<?php echo base_url(); ?>team"><strong>Team</strong></a></p>
   			<p class = "col-sm-2"><a href = "<?php echo base_url(); ?>projects"><strong>Projects</strong></a></p>
-  			<p class = "col-sm-2"><a href = "<?php echo base_url(); ?>user/login"><strong>Get Started</strong></a></p>
-  			<p class = "col-sm-2"><a href = "<?php echo base_url(); ?>user/registration"><strong>Login</strong></a></p>
-  			<p class = "col-sm-2"><a href = "<?php echo base_url(); ?>start_project"><strong>Register</strong></a></p>
+  			<p class = "col-sm-2"><a href = "<?php echo base_url(); ?>start_project"><strong>Start a project</strong></a></p>
+  					
+  			<?php
+						if($this->session->userdata('isUserLoggedIn')){
+								$this->load->model('Mopencode');
+          						$data['results'] = $this->Mopencode->getRows(array('id'=>$this->session->userdata('userId')));
+           			 //load this header
+
+        					//$seid=$this->session->userdata('userId');
+        					//$data['row']=$this->Mopencode->getUser($seid);
+         					$this->load->view('home1',$data);
+
+       					 }
+       					 else
+       					 {
+          					 $this->load->view('home2');
+       					 } ?>
   		</nav>
   	</div>
   </div>
