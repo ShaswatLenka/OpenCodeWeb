@@ -18,6 +18,7 @@
 	<meta name="twitter:url" content="" />
 	<meta name="twitter:card" content="" />
 
+
 	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 	<link rel="shortcut icon" href="<?php echo base_url('assetsWeb/favicon/favicon.png') ?>">
 

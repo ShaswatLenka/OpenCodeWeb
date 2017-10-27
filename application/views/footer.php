@@ -3,7 +3,7 @@
 				<div class="container">
 					<div class="row">
 						<div class="col-md-6">
-							<p>Copyright 2017 OpenCode Foundation. All Rights Reserved. <br>Made with <i class="icon-heart3 love"></i> by Shaswat</p>
+							<p><strong>&copy;Copyright 2017 OpenCode. All Rights Reserved.</strong></p>
 						</div>
 						<div class="col-md-6 social-text-align">
 							<p class="fh5co-social-icons">
@@ -13,10 +13,38 @@
 							</p>
 						</div>
 					</div>
+					<br>
+					<div class="row">
+						<div class="col-md-6">
+							<p><strong>Contacts:</strong></p>
+						</div>
+						<div class="col-md-3">
+							<p><strong>President: +91 8763145905</strong></p>
+						</div>
+
+						<div class="col-md-3">
+							<p><strong>Vice-President: +91 9040409540 </strong></p>
+						</div>
+					</div><br>
+					<div class="row">
+						<div class="col-md-6">
+						<p><strong>Design Partner: DesignTab</strong> </p>
+
+						</div>
+					</div> <br>
+						
+
+					<div class="row">
+						<div class="col-md-6">
+							<p><strong>Faculty Advisor: Dr. Paresh Kale</strong></p>
+						</div>
+						<div class="col-md-6">
+							
+						</div>
+					</div><br>
 				</div>
 			</div>
 		</footer>
-	</div>
 	
 
 	<!-- jQuery -->
