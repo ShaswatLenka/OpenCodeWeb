@@ -30,7 +30,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-md-8 col-md-offset-2 animate-box text-center heading-section">
-                        <h2>Let's revolutionize the way we code.</h2>
+                        <h2>Let's revolutionize the way we develop.</h2>
 						<h3>The Official Open Source Society of NIT Rourkela</h3>
 					</div>
 				</div>
@@ -47,7 +47,7 @@
             	<div class="row">
             	<div class="col-sm-8"></div>
             		<div class="col-sm-4 justify_text animate-box">
-						<p><strong>We are doing our best to make OpenCode interdisciplinary…  Don’t worry if coding is not fun for you…just send us an idea that can be developed into a product and get started…</strong></p>            			
+						<p><strong>Hey! OpenCode is interdisciplinary…  Don’t worry if coding is not fun for you…just send us your idea that can be developed into a product and get started!</strong></p>            			
             		</div>
             	</div>
             </div>
@@ -161,3 +161,4 @@
      	 </div>
  	</div>
 <br><br>
+

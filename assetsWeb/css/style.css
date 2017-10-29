@@ -92,6 +92,7 @@ h1, h2, h3, h4, h5, h6 {
     text-justify:inter-word;
 }
 
+
 ::-webkit-selection {
   color: #fcfcfc;
   background: #b7c2c2;
@@ -733,4 +734,3 @@ input[type="text"] {
 .js .animate-box {
   opacity: 0;
 }
-

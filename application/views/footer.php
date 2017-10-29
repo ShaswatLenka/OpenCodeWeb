@@ -56,10 +56,11 @@
 	<!-- Waypoints -->
 	<script src="<?php echo base_url('assetsWeb/js/jquery.waypoints.min.js')?>"></script>
 
-
 	<!-- Main JS (Do not remove) -->
 	<script src="<?php echo base_url('assetsWeb/js/main.js')?>"></script>
-
+	<!-- JS for image clicks -->
+	<script src = "<?php echo base_url('assetsWeb/js/onclick.js')?>"></script>
+	
 	<script type="text/javascript">
 	$(function () {
 		

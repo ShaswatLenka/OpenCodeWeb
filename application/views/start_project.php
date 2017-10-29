@@ -19,7 +19,7 @@
 		<h3><strong>C. To start any other Project:</strong> </h3>
 		
 		<h3><strong>Next Step:</strong></h3>
-		<p>1. Create your OpenCode account <a target="_blank" href = "register.php"> here</a></p>
+		<p>1. Create your OpenCode account and login</a></p>
 		<p>2. Submit and describe your idea. (You will be directed to the ideas page only after you create an account) </p>
 		<p>3. Your idea will be pitched in the community and selected on <a target="_blank" href = ../ideas.html> these </a> criteria </p>
 		<p> Voila! Once your idea is selected we will get in touch with you!</p> 	
