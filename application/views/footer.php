@@ -13,7 +13,7 @@
 							</p>
 						</div>
 					</div>
-					<br>
+					
 					<div class="row">
 						<div class="col-md-6">
 							<p><strong>Contacts:</strong></p>
@@ -25,13 +25,13 @@
 						<div class="col-md-3">
 							<p><strong>Vice-President: +91 9040409540 </strong></p>
 						</div>
-					</div><br>
+					</div>
 					<div class="row">
 						<div class="col-md-6">
 						<p><strong>Design Partner: DesignTab</strong> </p>
 
 						</div>
-					</div> <br>
+					</div> 
 						
 
 					<div class="row">
@@ -41,7 +41,7 @@
 						<div class="col-md-6">
 							
 						</div>
-					</div><br>
+					</div>
 				</div>
 			</div>
 		</footer>

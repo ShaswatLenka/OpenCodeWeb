@@ -35,29 +35,38 @@
 					</div>
 				</div>
 
-				<section class="container">
+				
             	<div class="row">
-            		<figure class="col-sm-4 justify_text animate-box ">
-						<p><strong>Whether you have started with the “hello world”, building the next Word Processor or building a product that would change the world…you are welcome to collaborate with us. Login, Start and represent the community!</strong></p>            			
+            		<figure class="col-md-4 justify_text animate-box ">
+            		<br><br><br>
+						<p><strong>Whether you have started with the “hello world”, building the next Word Processor or building a product that would change the world…you are welcome to collaborate with us. Login, Start and represent the community!</strong></p> 
+						</figure>
+				
+
+					<div class="col-sm-8 animate-box img-centre">
+						<img class="img-responsive" src="assetsWeb/images/HelloWorld.jpg"/>
             		</div>
             	</div>
-            		</figure>
-            </section>
-            <div class="container">
+            	
+      
             	<div class="row">
-            	<div class="col-sm-8"></div>
-            		<div class="col-sm-4 justify_text animate-box">
-						<p><strong>Hey! OpenCode is interdisciplinary…  Don’t worry if coding is not fun for you…just send us your idea that can be developed into a product and get started!</strong></p>            			
+					<div class="col-sm-5 animate-box">
+						<img class="img-responsive" src="assetsWeb/images/Idea.jpg"/>
+						<br>
+            		</div> 
+            		<div class="col-sm-2"></div>
+
+            		<div class="col-sm-5 justify_text animate-box">
+            		<br><br>
+						<p><strong>Hey! OpenCode is interdisciplinary…  Don’t worry if coding is not fun for you…just send us your idea that can be developed into a product and get started!</strong></p> 
             		</div>
             	</div>
-            </div>
-            <div class="container">
+            <br>
             	<div class="row">
             		<div class="col-sm-4 justify_text animate-box">
 						<p><strong>Join Us and be a part of the rapidly growing Open Source community of software developers, robotolics, product developers and designers!</strong></p>            			
             		</div>
             	</div>
-            </div>
             <br><br><br>
             <div id="fh5co-services-section">
 				<div class="row">
