@@ -23,11 +23,7 @@
         return $result;
   
     }
-      */  function getUser($name){
-            //$this->load->helper('url');
-            $query = $this->db->get_where("users",array("name"=>$name));
-            return $query->result();
-        }
+      */ 
         function getComment($comments){
             //$this->load->helper('url');
             $query = $this->db->get_where("comments",array("comments"=>$comments));
@@ -62,6 +58,7 @@
             $this->db->where('id',$params['id']);
             $query = $this->db->get();
             $result = $query->row_array();
+            return $query->row_array();
         }else{
             //set start and limit
             if(array_key_exists("start",$params) && array_key_exists("limit",$params)){
@@ -70,8 +67,10 @@
                 $this->db->limit($params['limit']);
             }
             $query = $this->db->get();
+            return $query->row_array();
             if(array_key_exists("returnType",$params) && $params['returnType'] == 'count'){
                 $result = $query->num_rows();
+                return $query->row_array();
             }elseif(array_key_exists("returnType",$params) && $params['returnType'] == 'single'){
                 $result = ($query->num_rows() > 0)?$query->row_array():FALSE;
             }else{
@@ -83,6 +82,15 @@
         return $result;
     }
     
+        function getUser($seid)
+    {
+        $this->db->select('name', 'email');
+        //$this->db->from('users');
+        $this->db->where('email', $seid);
+        $query = $this->db->get('users');
+        return $query->row_array();
+    }
+
     /*
      * Insert user information
      */

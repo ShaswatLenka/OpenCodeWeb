@@ -7,9 +7,11 @@ if( ! defined('BASEPATH')) exit('No direct script access allowed');
 		}
 
 		public function home(){
-            
-           $this->load->view('header');
-            $this->load->view('home');
+
+            $seid=$this->session->userdata('userId');
+            $data['result']=$this->Mopencode->getUser($seid);
+            $this->load->view('header');
+            $this->load->view('home',$data);
             $this->load->view('footer');
 	}
 

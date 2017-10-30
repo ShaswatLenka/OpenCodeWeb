@@ -19,9 +19,9 @@
 		<h3><strong>C. To start any other Project:</strong> </h3>
 		
 		<h3><strong>Next Step:</strong></h3>
-		<p>1. Create your OpenCode account and login</a></p>
+		<p>1. Create your OpenCode account</p>
 		<p>2. Submit and describe your idea. (You will be directed to the ideas page only after you create an account) </p>
-		<p>3. Your idea will be pitched in the community and selected on <a target="_blank" href = ../ideas.html> these </a> criteria </p>
+		<p>3. Your idea will be pitched in the community and selected on these criteria </p>
 		<p> Voila! Once your idea is selected we will get in touch with you!</p> 	
 
 		</div>
@@ -29,3 +29,29 @@
 		</div>
 
 		<!-- End of Guidelines-->
+		<!--start idea form-->
+			<div class="container">
+					<form action="" method="post" class="idea-form">
+						<div class="form-group">
+							<div class="col-sm-4">
+								<select class="form-control" id="sel1" placeholder="Select list:">
+									<option>Robotics</option>
+									<option>Website</option>
+									<option>App</option>
+									<option>Others</option>
+								</select>
+							</div>
+							<br/><br/>
+							<div class="col-sm-8">
+								<input type="text" name="title" size="79" class="text" placeholder="TITLE (Required)"><br/><br/>
+							</div>
+							<div class="col-sm-8">
+								<textarea name="message" cols="80" rows="5" class="textarea" placeholder="YOUR IDEA"></textarea><br/>
+							</div>
+							<div class="col-sm-8">
+								<input type="submit" value="Send" class="submit" id="submit"><br/>
+							</div>
+						</div>
+					</form>
+			</div>
+		<!-- end idea form -->
