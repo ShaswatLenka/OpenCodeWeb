@@ -1,0 +1,1 @@
+<p>Please <a href = "<?php echo base_url(); ?>user/login">login</a>/<a href = "<?php echo base_url(); ?>user/registration">register</a> to send your idea</p>

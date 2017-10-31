@@ -12,13 +12,16 @@
 		<?php $this->load->helper('url');
 		?>
 		<div class="container">
-			<div class="jumbotron" style="background-color: #073763">
+			<div class="jumbotron" style="background-color: gray">
 				<div class="row">
 					<div class="col-lg-offset-2 col-lg-8">
 				<div class="jumbotron">
 				<div class="row">
-					<div class="col-lg-offset-5 col-sm-4">
+					<div class="col-lg-offset-5 col-sm-5">
 						<h2><b>Login</b></h2>
+					</div>
+					<div class="col-sm-2">
+						<a href = "<?php echo base_url(); ?>home"><h2><small>Skip</small></h2></a>
 					</div>
 				</div>
 					<div class="row">
@@ -62,7 +65,7 @@
 							<p>Don't have an account?&nbsp;&nbsp;Register now!</p>
 						<div class="row">
 							<div class="col-lg-offset-5 col-sm-4">
-								<div class="btn btn-success btn-lg"><?php echo anchor('Opencode/registration','Register');?></div>
+								<div class="btn btn-default btn-lg"><?php echo anchor('Opencode/registration','Register');?></div>
 							</div>
 						</div>
 						</div>

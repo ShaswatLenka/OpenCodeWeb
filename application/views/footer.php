@@ -48,52 +48,17 @@
 	
 
 	<!-- jQuery -->
-	<script src="<?php echo base_url('assetsWeb/js/jquery.min.js')?>"></script>
+	<script src="<?php echo base_url('assets/bootstrap/js/jquery.min.js')?>"></script>
 	<!-- jQuery Easing -->
-	<script src="<?php echo base_url('assetsWeb/js/jquery.easing.1.3.js')?>"></script>
+	<script src="<?php echo base_url('assets/bootstrap/js/jquery.easing.1.3.js')?>"></script>
 	<!-- Bootstrap -->
-	<script src="<?php echo base_url('assetsWeb/js/bootstrap.min.js')?>"></script>
+	<script src="<?php echo base_url('assets/bootstrap/js/bootstrap.min.js')?>"></script>
 	<!-- Waypoints -->
-	<script src="<?php echo base_url('assetsWeb/js/jquery.waypoints.min.js')?>"></script>
+	<script src="<?php echo base_url('assets/bootstrap/js/jquery.waypoints.min.js')?>"></script>
 
 
 	<!-- Main JS (Do not remove) -->
-	<script src="<?php echo base_url('assetsWeb/js/main.js')?>"></script>
-
-	<script type="text/javascript">
-	$(function () {
-		
-		var filterList = {
-		
-			init: function () {
-			
-				// MixItUp plugin
-				// http://mixitup.io
-				$('#portfoliolist').mixitup({
-  				selectors: {
-    			  target: '.portfolio',
-    			  filter: '.filter'	
-    		  },
-    		  load: {
-      		  filter: '.all'  
-      		}     
-				});								
-			
-			}
-
-		};
-		
-		// Run the show!
-		filterList.init();
-
-		
-		
-	});	
-
-	</script>
-
-
-<script src="<?php echo base_url('assetsWeb\mixitup\dist/mixitup.min.js')?>"></script>
+	<script src="<?php echo base_url('assets/bootstrap/js/main.js')?>"></script>
 
 	</body>
 </html>

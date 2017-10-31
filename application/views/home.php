@@ -21,11 +21,9 @@
   			<?php
 						if($this->session->userdata('isUserLoggedIn')){
 								$this->load->model('Mopencode');
-          						$data['results'] = $this->Mopencode->getRows(array('id'=>$this->session->userdata('userId')));
+          						$data['results'] = $this->Mopencode->getRows(array('user_id'=>$this->session->userdata('userId')));
            			 //load this header
 
-        					//$seid=$this->session->userdata('userId');
-        					//$data['row']=$this->Mopencode->getUser($seid);
          					$this->load->view('home1',$data);
 
        					 }

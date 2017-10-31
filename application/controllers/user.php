@@ -22,7 +22,7 @@ class User extends BaseController
      */
     public function index()
     {
-        $this->global['pageTitle'] = 'OpenNews : Dashboard';
+        $this->global['pageTitle'] = 'OpenCode : Dashboard';
         
         $this->loadViews("dashboard", $this->global, NULL , NULL);
     }
@@ -59,7 +59,7 @@ class User extends BaseController
 
  function postListing()
     {
-        if($this->isAdmin() == TRUE)
+        if($this->isAdmin() == TRUE||$this->isTeamMember()== TRUE)
         {
             $this->loadThis();
         }
@@ -87,7 +87,7 @@ class User extends BaseController
 
  function articleListing()
     {
-        if($this->isAdmin() == TRUE)
+        if($this->isAdmin() == TRUE||$this->isTeamMember()== TRUE)
         {
             $this->loadThis();
         }

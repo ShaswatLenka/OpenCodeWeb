@@ -2,29 +2,7 @@
 	
 	class Mopencode extends CI_Model{
         
-	/*	function getData($page){
-			//$this->load->helper('url');
-			$query = $this->db->get_where("homepage",array("page"=>$page));
-			return $query->result();
-		} 
-
-         function getArticle($postId)
-        {
-            $this->db->select('ptitle,categoryId,authorId,iurl,pcontent,psummery');
-            $this->db->from('tbl_posts');
-            //$this->db->join('tbl_categories as Category', 'categoryId = categoryId','left');
-         
-        $this->db->where('isDeleted', 0);
-        //$this->db->where('categoryId ');
-        //$this->db->limit($page, $segment);
-        $query = $this->db->get();
-        
-        $result = $query->result();        
-        return $result;
-  
-    }
-      */ 
-        function getComment($comments){
+	    function getComment($comments){
             //$this->load->helper('url');
             $query = $this->db->get_where("comments",array("comments"=>$comments));
             return $query->result();
@@ -41,6 +19,7 @@
 //	}
 	 function __construct() {
         $this->userTbl = 'users';
+        $this->ideaTbl = 'ideas';
     }
 
 	function getRows($params = array()){
@@ -54,11 +33,10 @@
             }
         }
         
-        if(array_key_exists("id",$params)){
-            $this->db->where('id',$params['id']);
+        if(array_key_exists("user_id",$params)){
+            $this->db->where('user_id',$params['user_id']);
             $query = $this->db->get();
             $result = $query->row_array();
-            return $query->row_array();
         }else{
             //set start and limit
             if(array_key_exists("start",$params) && array_key_exists("limit",$params)){
@@ -67,10 +45,8 @@
                 $this->db->limit($params['limit']);
             }
             $query = $this->db->get();
-            return $query->row_array();
             if(array_key_exists("returnType",$params) && $params['returnType'] == 'count'){
                 $result = $query->num_rows();
-                return $query->row_array();
             }elseif(array_key_exists("returnType",$params) && $params['returnType'] == 'single'){
                 $result = ($query->num_rows() > 0)?$query->row_array():FALSE;
             }else{
@@ -82,15 +58,6 @@
         return $result;
     }
     
-        function getUser($seid)
-    {
-        $this->db->select('name', 'email');
-        //$this->db->from('users');
-        $this->db->where('email', $seid);
-        $query = $this->db->get('users');
-        return $query->row_array();
-    }
-
     /*
      * Insert user information
      */
@@ -99,20 +66,91 @@
         if(!array_key_exists("created", $data)){
             $data['created'] = date("Y-m-d H:i:s");
         }
-        //if(!array_key_exists("modified", $data)){
-          //  $data['modified'] = date("Y-m-d H:i:s");
-        //}
         
         //insert user data to users table
         $insert = $this->db->insert($this->userTbl, $data);
         
         //return the status
         if($insert){
-            return $this->db->insert_id();;
+            return $this->db->insert_id();
         }else{
             return false;
         }
     }
+       function insertIdea($data) {
+        //add created and modified data if not included
+        if(!array_key_exists("created", $data)){
+            $data['created'] = date("Y-m-d H:i:s");
+        }
+        if(!array_key_exists("user_id", $data)){
+            $data['user_id'] = $this->session->userdata('userId');
+        }
+        if(!array_key_exists("status", $data)){
+            $data['status'] = 'Pending';
+        }
 
+        //insert idea data to ideas table
+        $insert = $this->db->insert('ideas', $data);
+        
+        //return the status
+        if($insert){
+            return $this->db->insert_id();
+        }else{
+            return false;
+        }
+    }
+     /*function getIdea($userId)
+        {
+            $this->db->select('*');
+            $this->db->from('ideas');
+
+        $this->db->where('user_id',$userId);
+        $query = $this->db->get();
+        
+        $result = $query->result();        
+        return $result;
+  
+    }*/
+    function getIdea($userId)
+    {
+        $this->db->select('*');
+        $this->db->from('ideas');
+        $this->db->where('user_id',$userId);
+        $query = $this->db->get();
+        $result = $query->result();        
+        
+       return $result;
+  /*
+        $idea = array();
+        $row = $query->row();
+
+        $idea['message_id'] = $row->message_id;
+        $idea['messageTitle'] = $row->messageTitle;
+        $idea['message'] = $row->message;
+        $idea['category_id'] = $row->category_id;
+        $idea['status_id'] = $row->status_id;
+        
+       // $idea['category'] = $row->getCategories($idea['category_id']);
+       // $idea['status'] = $row->getStatus($idea['status_id']);
+    
+        //return $query->row_array();
+    */  //  return $idea;
+    }
+
+   /*  function getCategories($category_id)
+    {
+        $this->db->select('category');
+        $this->db->from('tbl_categories');
+        $this->db->where('$category_id',$category_id);
+        $query = $this->db->get();
+        return $query;
+    }
+     function getStatus($status_id)
+    {
+        $this->db->select('status');
+        $this->db->from('tbl_status');
+        $this->db->where('$status_id',$status_id);
+        $query = $this->db->get();
+        return $query;
+    } */
 }
-
