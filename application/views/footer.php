@@ -13,7 +13,7 @@
 							</p>
 						</div>
 					</div>
-					<br>
+					
 					<div class="row">
 						<div class="col-md-6">
 							<p><strong>Contacts:</strong></p>
@@ -25,13 +25,13 @@
 						<div class="col-md-3">
 							<p><strong>Vice-President: +91 9040409540 </strong></p>
 						</div>
-					</div><br>
+					</div>
 					<div class="row">
 						<div class="col-md-6">
 						<p><strong>Design Partner: DesignTab</strong> </p>
 
 						</div>
-					</div> <br>
+					</div> 
 						
 
 					<div class="row">
@@ -41,7 +41,7 @@
 						<div class="col-md-6">
 							
 						</div>
-					</div><br>
+					</div>
 				</div>
 			</div>
 		</footer>
@@ -56,9 +56,13 @@
 	<!-- Waypoints -->
 	<script src="<?php echo base_url('assets/bootstrap/js/jquery.waypoints.min.js')?>"></script>
 
-
 	<!-- Main JS (Do not remove) -->
 	<script src="<?php echo base_url('assets/bootstrap/js/main.js')?>"></script>
+
+<script src="<?php echo base_url('assetsWeb/js/main.js')?>"></script>
+	<!-- JS for image clicks -->
+	<script src = "<?php echo base_url('assetsWeb/js/onclick.js')?>"></script>
+	
 
 	</body>
 </html>

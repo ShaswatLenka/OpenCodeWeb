@@ -1,4 +1,7 @@
-
+.img-centre{
+  display: block;
+  margin:0 auto;
+}
 
 .jumbotron{
 background-color: white;
@@ -91,6 +94,7 @@ h1, h2, h3, h4, h5, h6 {
      text-align: justify;
     text-justify:inter-word;
 }
+
 
 ::-webkit-selection {
   color: #fcfcfc;
@@ -733,4 +737,3 @@ input[type="text"] {
 .js .animate-box {
   opacity: 0;
 }
-
