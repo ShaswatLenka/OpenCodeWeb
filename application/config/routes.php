@@ -11,6 +11,7 @@ $route['user/account'] = 'Opencode/account';
 $route['user/login'] = 'Opencode/login';
 $route['user/registration'] = 'Opencode/registration';
 $route['user/logout'] = 'Opencode/logout';
+$route['user/userMessage'] = 'Opencode/userMessageListing';
 $route['user/emailChecking'] = 'Opencode/email_check';
 
 $route['upload/image'] = 'upload';

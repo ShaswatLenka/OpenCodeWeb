@@ -20,29 +20,27 @@
 
 
 	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-	<link rel="shortcut icon" href="<?php echo base_url('assetsWeb/favicon/favicon.png') ?>">
+	<link rel="shortcut icon" href="<?php echo base_url('assets/favicon/favicon.png') ?>">
 
 	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
 	
 	<!-- Animate.css -->
-	<link rel="stylesheet" href="<?php echo base_url('assetsWeb/css/animate.css')?>">
+	<link rel="stylesheet" href="<?php echo base_url('assets/bootstrap/css/animate.css')?>">
 	<!-- Icomoon Icon Fonts-->
-	<link rel="stylesheet" href="<?php echo base_url('assetsWeb/css/icomoon.css')?>">
+	<link rel="stylesheet" href="<?php echo base_url('assets/bootstrap/css/icomoon.css')?>">
 	<!-- Bootstrap  -->
-	<link rel="stylesheet" href="<?php echo base_url('assetsWeb/css/bootstrap.css')?>">
+	<link rel="stylesheet" href="<?php echo base_url('assets/bootstrap/css/bootstrap.css')?>">
 
 	<link rel="stylesheet" href="<?php echo base_url('assetsWeb/css/style.css')?>">
 
 
 	<!-- Modernizr JS -->
-	<script src="<?php echo base_url('assetsWeb/js/modernizr-2.6.2.min.js')?>"></script>
+	<script src="<?php echo base_url('assets/bootstrap/js/modernizr-2.6.2.min.js')?>"></script>
 	<!-- FOR IE9 below -->
 	<!--[if lt IE 9]>
 	<script src="js/respond.min.js"></script>
 	<![endif]-->
     <script src="https://use.fontawesome.com/1ca4075295.js"></script>
-
-
 
 	</head>
 	<body>
@@ -76,7 +74,7 @@
 		<header>
 			<div class="container">
 				<div class="fh5co-navbar-brand">
-					<a class="fh5co-logo" href="index.php">Open<strong>Code</strong></a>
+					<a class="fh5co-logo" href="#">Open<strong>Code</strong></a>
 				</div>
 				<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>
 			</div>

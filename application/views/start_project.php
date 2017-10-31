@@ -31,27 +31,15 @@
 		<!-- End of Guidelines-->
 		<!--start idea form-->
 			<div class="container">
-					<form action="" method="post" class="idea-form">
-						<div class="form-group">
-							<div class="col-sm-4">
-								<select class="form-control" id="sel1" placeholder="Select list:">
-									<option>Robotics</option>
-									<option>Website</option>
-									<option>App</option>
-									<option>Others</option>
-								</select>
-							</div>
-							<br/><br/>
-							<div class="col-sm-8">
-								<input type="text" name="title" size="79" class="text" placeholder="TITLE (Required)"><br/><br/>
-							</div>
-							<div class="col-sm-8">
-								<textarea name="message" cols="80" rows="5" class="textarea" placeholder="YOUR IDEA"></textarea><br/>
-							</div>
-							<div class="col-sm-8">
-								<input type="submit" value="Send" class="submit" id="submit"><br/>
-							</div>
-						</div>
-					</form>
-			</div>
+					
+					<?php
+						if($this->session->userdata('isUserLoggedIn')){
+          						 $data['Mopencode'] = $this->Mopencode->getRows(array('id'=>$this->session->userdata('userId')));
+           			 //load this header
+           					 $this->load->view('idea_form');
+       					 }else{
+          					 $this->load->view('non_idea_form');
+       						 } ?>
+
+				</div>
 		<!-- end idea form -->
