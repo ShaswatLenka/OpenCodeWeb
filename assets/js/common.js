@@ -2,12 +2,12 @@
 
 jQuery(document).ready(function(){
 	
-	jQuery(document).on("click", ".deleteUser", function(){
-		var userId = $(this).data("userid"),
-			hitURL = baseURL + "deleteUser",
+	jQuery(document).on("click", ".deleteMember", function(){
+		var memberId = $(this).data("memberid"),
+			hitURL = baseURL + "deleteMember",
 			currentRow = $(this);
 		
-		var confirmation = confirm("Are you sure to delete this user ?");
+		var confirmation = confirm("Are you sure to delete this member ?");
 		
 		if(confirmation)
 		{
@@ -15,12 +15,12 @@ jQuery(document).ready(function(){
 			type : "POST",
 			dataType : "json",
 			url : hitURL,
-			data : { userId : userId } 
+			data : { memberId : memberId } 
 			}).done(function(data){
 				console.log(data);
 				currentRow.parents('tr').remove();
-				if(data.status = true) { alert("User successfully deleted"); }
-				else if(data.status = false) { alert("User deletion failed"); }
+				if(data.status = true) { alert("Member successfully deleted"); }
+				else if(data.status = false) { alert("Member deletion failed"); }
 				else { alert("Access denied..!"); }
 			});
 		}

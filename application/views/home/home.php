@@ -24,12 +24,12 @@
           						$data['results'] = $this->Mopencode->getRows(array('user_id'=>$this->session->userdata('userId')));
            			 //load this header
 
-         					$this->load->view('home1',$data);
+         					$this->load->view('home/home1',$data);
 
        					 }
        					 else
        					 {
-          					 $this->load->view('home2');
+          					 $this->load->view('home/home2');
        					 } ?>
   		</nav>
   	</div>
@@ -56,14 +56,14 @@
 				
 
 					<div class="col-sm-8 animate-box img-centre">
-						<img class="img-responsive" src="assetsWeb/images/HelloWorld.jpg"/>
+						<img class="img-responsive" src="<?php echo base_url('assetsWeb/images/HelloWorld.jpg')?>"/>
             		</div>
             	</div>
             	
       
             	<div class="row">
 					<div class="col-sm-5 animate-box">
-						<img class="img-responsive" src="assetsWeb/images/Idea.jpg"/>
+						<img class="img-responsive" src="<?php echo base_url('assetsWeb/images/Idea.jpg')?>"/>
 						<br>
             		</div> 
             		<div class="col-sm-2"></div>
@@ -153,33 +153,38 @@
         <div class="row">
             <div class="col-sm-4">
                 <div class="thumbnail text-center">
-                    <img alt="" class="img-responsive" src="<?php echo base_url('assetsWeb/images/saturday.jpg')?>">
-
-                    <div class="caption">
-                        <h4>Saturday</h4>
+                   <div class="img">
+                        <a href="<?php echo base_url(); ?>projects/saturday"><img src="<?php echo base_url(); ?>assetsWeb/images/saturday.jpg" width="350" height="300" alt="<?php echo base_url(); ?>assetsWeb/images/saturday.jpg">
+                            <div class="overlay"></div></a>
+                            </div>
+                         <div class="caption">
+                        <a href="<?php echo base_url(); ?>projects/saturday"><h4>Saturday</h4></a>
                     </div>
                 </div>
             </div>
-		<div class="col-sm-4">
+        <div class="col-sm-4">
                 <div class="thumbnail text-center">
-                    <img alt="" class="img-responsive" src="<?php echo base_url('assetsWeb/images/saturday.jpg')?>">  
-
+                    <div class="img">
+                        <a href="<?php echo base_url(); ?>projects/chessbot"><img src="<?php echo base_url(); ?>assetsWeb/images/saturday.jpg" width="350" height="300" alt="<?php echo base_url(); ?>assetsWeb/images/saturday.jpg">
+                            <div class="overlay"></div></a>
+                            </div>
                     <div class="caption">
-                        <h4>chessbot</h4>
+                        <a href="<?php echo base_url(); ?>projects/chessbot"><h4>chessbot</h4></a>
                     </div>
                 </div>
             </div>
 
-		<div class="col-sm-4">
+        <div class="col-sm-4">
                 <div class="thumbnail text-center">
-                    <img alt="" class="img-responsive" src="<?php echo base_url('assetsWeb/images/saturday.jpg')?>">  
-
+                    <div class="img">
+                        <a href="<?php echo base_url(); ?>projects/minipaint"><img src="<?php echo base_url(); ?>assetsWeb/images/saturday.jpg" width="350" height="300" alt="<?php echo base_url(); ?>assetsWeb/images/saturday.jpg">
+                            <div class="overlay"></div></a>
+                            </div>
                     <div class="caption">
-                        <h4>MinPaint</h4>
+                        <a href="<?php echo base_url(); ?>projects/minipaint"><h4>MinPaint</h4></a>
                     </div>
                 </div>
             </div>
-     	 </div>
- 	</div>
+         </div>
+    </div>
 <br><br>
-

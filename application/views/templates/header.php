@@ -20,27 +20,29 @@
 
 
 	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-	<link rel="shortcut icon" href="<?php echo base_url('assets/favicon/favicon.png') ?>">
+	<link rel="shortcut icon" href="<?php echo base_url('assetsWeb/favicon/favicon.png') ?>">
 
 	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
 	
 	<!-- Animate.css -->
-	<link rel="stylesheet" href="<?php echo base_url('assets/bootstrap/css/animate.css')?>">
+	<link rel="stylesheet" href="<?php echo base_url('assetsWeb/css/animate.css')?>">
 	<!-- Icomoon Icon Fonts-->
-	<link rel="stylesheet" href="<?php echo base_url('assets/bootstrap/css/icomoon.css')?>">
+	<link rel="stylesheet" href="<?php echo base_url('assetsWeb/css/icomoon.css')?>">
 	<!-- Bootstrap  -->
-	<link rel="stylesheet" href="<?php echo base_url('assets/bootstrap/css/bootstrap.css')?>">
+	<link rel="stylesheet" href="<?php echo base_url('assetsWeb/css/bootstrap.css')?>">
 
 	<link rel="stylesheet" href="<?php echo base_url('assetsWeb/css/style.css')?>">
 
 
 	<!-- Modernizr JS -->
-	<script src="<?php echo base_url('assets/bootstrap/js/modernizr-2.6.2.min.js')?>"></script>
+	<script src="<?php echo base_url('assetsWeb/js/modernizr-2.6.2.min.js')?>"></script>
 	<!-- FOR IE9 below -->
 	<!--[if lt IE 9]>
 	<script src="js/respond.min.js"></script>
 	<![endif]-->
     <script src="https://use.fontawesome.com/1ca4075295.js"></script>
+
+
 
 	</head>
 	<body>
@@ -62,9 +64,9 @@
 						if($this->session->userdata('isUserLoggedIn')){
           						 $data['Mopencode'] = $this->Mopencode->getRows(array('id'=>$this->session->userdata('userId')));
            			 //load this header
-           					 $this->load->view('header2');
+           					 $this->load->view('templates/header2');
        					 }else{
-          					 $this->load->view('header1');
+          					 $this->load->view('templates/header1');
        						 } ?>
 				</ul>
 			</div>
@@ -79,4 +81,3 @@
 				<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>
 			</div>
 		</header>
-		

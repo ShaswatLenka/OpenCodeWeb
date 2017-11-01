@@ -1,17 +1,17 @@
 /**
- * File : editUser.js 
+ * File : editMember.js 
  * 
- * This file contain the validation of edit user form
+ * This file contain the validation of edit Member form
  */
 $(document).ready(function(){
 	
-	var editUserForm = $("#editUser");
+	var editMemberForm = $("#editMember");
 	
-	var validator = editUserForm.validate({
+	var validator = editMemberForm.validate({
 		
 		rules:{
 			fname :{ required : true },
-			email : { required : true, email : true, remote : { url : baseURL + "checkEmailExists", type :"post", data : { userId : function(){ return $("#userId").val(); } } } },
+			email : { required : true, email : true, remote : { url : baseURL + "checkEmailExists", type :"post", data : { MemberId : function(){ return $("#MemberId").val(); } } } },
 			cpassword : {equalTo: "#password"},
 			mobile : { required : true, digits : true },
 			role : { required : true, selected : true}

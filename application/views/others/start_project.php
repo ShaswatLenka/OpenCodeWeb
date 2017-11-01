@@ -36,9 +36,9 @@
 						if($this->session->userdata('isUserLoggedIn')){
           						 $data['Mopencode'] = $this->Mopencode->getRows(array('id'=>$this->session->userdata('userId')));
            			 //load this header
-           					 $this->load->view('idea_form');
+           					 $this->load->view('others/idea_form');
        					 }else{
-          					 $this->load->view('non_idea_form');
+          					 $this->load->view('others/non_idea_form');
        						 } ?>
 
 				</div>
