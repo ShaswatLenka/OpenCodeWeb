@@ -2,6 +2,8 @@
 	
 	'use strict';
 
+
+
 	// iPad and iPod detection	
 	var isiPad = function(){
 		return (navigator.platform.indexOf("iPad") != -1);

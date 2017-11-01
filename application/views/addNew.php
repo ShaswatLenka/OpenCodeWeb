@@ -2,8 +2,8 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        <i class="fa fa-users"></i> User Management
-        <small>Add / Edit User</small>
+        <i class="fa fa-users"></i> Member Management
+        <small>Add / Edit Member</small>
       </h1>
     </section>
     
@@ -14,15 +14,13 @@
             <div class="col-md-8">
               <!-- general form elements -->
                 
-                
-                
                 <div class="box box-primary">
                     <div class="box-header">
-                        <h3 class="box-title">Enter User Details</h3>
+                        <h3 class="box-title">Enter Member Details</h3>
                     </div><!-- /.box-header -->
                     <!-- form start -->
                     
-                    <form role="form" id="addUser" action="<?php echo base_url() ?>addNewUser" method="post" role="form">
+                    <form role="form" id="addMember" action="<?php echo base_url() ?>addNewMember" method="post" role="form">
                         <div class="box-body">
                             <div class="row">
                                 <div class="col-md-6">                                
@@ -64,18 +62,11 @@
                                     <div class="form-group">
                                         <label for="role">Role</label>
                                         <select class="form-control required" id="role" name="role">
-                                            <option value="0">Select Role</option>
-                                            <?php
-                                            if(!empty($roles))
-                                            {
-                                                foreach ($roles as $rl)
-                                                {
-                                                    ?>
-                                                    <option value="<?php echo $rl->roleId ?>"><?php echo $rl->role ?></option>
-                                                    <?php
-                                                }
-                                            }
-                                            ?>
+                                            <option value="No role selected">Select Role</option>
+                                            <option value="System Admin">System Admin</option>
+                                            <option value="Team Member">Team Member</option>
+                                            <option value="Mentor">Mentor</option>
+                                            <option value="Other">Other</option>
                                         </select>
                                     </div>
                                 </div>    
@@ -122,4 +113,4 @@
     </section>
     
 </div>
-<script src="<?php echo base_url(); ?>assets/js/addUser.js" type="text/javascript"></script>
+<script src="<?php echo base_url(); ?>assets/js/addMember.js" type="text/javascript"></script>

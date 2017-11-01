@@ -1,7 +1,7 @@
 /**
- * File : addUser.js
+ * File : addMember.js
  * 
- * This file contain the validation of add user form
+ * This file contain the validation of add Member form
  * 
  * Using validation plugin : jquery.validate.js
  * 
@@ -9,9 +9,9 @@
 
 $(document).ready(function(){
 	
-	var addUserForm = $("#addUser");
+	var addMemberForm = $("#addMember");
 	
-	var validator = addUserForm.validate({
+	var validator = addMemberForm.validate({
 		
 		rules:{
 			fname :{ required : true },

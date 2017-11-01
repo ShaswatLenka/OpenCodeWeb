@@ -2,9 +2,9 @@
 
     <footer class="main-footer">
         <div class="pull-right hidden-xs">
-          <b>OpenNews</b> Admin System | Version 1.0
+          <b>OpenCode</b> Admin System | Version 1.0
         </div>
-        <strong>Copyright &copy; 2016-2017 <a href="<?php echo base_url(); ?>">OpenNews</a>.</strong> All rights reserved.
+        <strong>Copyright &copy; 2016-2017 <a href="<?php echo base_url(); ?>">OpenCode</a>.</strong> All rights reserved.
     </footer>
     
     <!-- jQuery UI 1.11.2 -->

@@ -5,18 +5,17 @@ class Login_model extends CI_Model
     
     function loginMe($email, $password)
     {
-        $this->db->select('BaseTbl.userId, BaseTbl.password, BaseTbl.name, BaseTbl.roleId, Roles.role');
-        $this->db->from('tbl_users as BaseTbl');
-        $this->db->join('tbl_roles as Roles','Roles.roleId = BaseTbl.roleId');
-        $this->db->where('BaseTbl.email', $email);
-        $this->db->where('BaseTbl.isDeleted', 0);
+        $this->db->select('*');
+        $this->db->from('tbl_members');
+        $this->db->where('email', $email);
+        $this->db->where('isDeleted', 0);
         $query = $this->db->get();
         
-        $user = $query->result();
+        $member = $query->result();
         
-        if(!empty($user)){
-            if(verifyHashedPassword($password, $user[0]->password)){
-                return $user;
+        if(!empty($member)){
+            if(verifyHashedPassword($password, $member[0]->password)){
+                return $member;
             } else {
                 return array();
             }
@@ -27,10 +26,10 @@ class Login_model extends CI_Model
 
     function checkEmailExist($email)
     {
-        $this->db->select('userId');
+        $this->db->select('memberId');
         $this->db->where('email', $email);
         $this->db->where('isDeleted', 0);
-        $query = $this->db->get('tbl_users');
+        $query = $this->db->get('tbl_members');
 
         if ($query->num_rows() > 0){
             return true;
@@ -39,7 +38,7 @@ class Login_model extends CI_Model
         }
     }
 
-
+    /*
     function resetPasswordUser($data)
     {
         $result = $this->db->insert('tbl_reset_password', $data);
@@ -49,7 +48,7 @@ class Login_model extends CI_Model
         } else {
             return FALSE;
         }
-    }
+    }*/
 
     function getCustomerInfoByEmail($email)
     {

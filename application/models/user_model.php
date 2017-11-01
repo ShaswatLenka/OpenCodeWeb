@@ -2,37 +2,32 @@
 
 class User_model extends CI_Model
 {
-    function userListingCount($searchText = '')
+    function memberListingCount($searchText = '')
     {
-        $this->db->select('BaseTbl.userId, BaseTbl.email, BaseTbl.name, BaseTbl.mobile, Role.role');
-        $this->db->from('tbl_users as BaseTbl');
-        $this->db->join('tbl_roles as Role', 'Role.roleId = BaseTbl.roleId','left');
+        $this->db->select('*');
+        $this->db->from('tbl_members');
+//        $this->db->join('tbl_roles as Role', 'Role.roleId = BaseTbl.roleId','left');
         if(!empty($searchText)) {
-            $likeCriteria = "(BaseTbl.email  LIKE '%".$searchText."%'
-                            OR  BaseTbl.name  LIKE '%".$searchText."%'
-                            OR  BaseTbl.mobile  LIKE '%".$searchText."%')";
+            $likeCriteria = "(   role LIKE '%".$searchText."%')";
             $this->db->where($likeCriteria);
         }
-        $this->db->where('BaseTbl.isDeleted', 0);
-        $this->db->where('BaseTbl.roleId !=', 1);
+        $this->db->where('isDeleted', 0);
+        $this->db->where('role !=','System Admin');
         $query = $this->db->get();
         
         return count($query->result());
     }
     
-    function userListing($searchText = '', $page, $segment)
+    function memberListing($searchText = '', $page, $segment)
     {
-        $this->db->select('BaseTbl.userId, BaseTbl.email, BaseTbl.name, BaseTbl.mobile, Role.role');
-        $this->db->from('tbl_users as BaseTbl');
-        $this->db->join('tbl_roles as Role', 'Role.roleId = BaseTbl.roleId','left');
+        $this->db->select('*');
+        $this->db->from('tbl_members');
         if(!empty($searchText)) {
-            $likeCriteria = "(BaseTbl.email  LIKE '%".$searchText."%'
-                            OR  BaseTbl.name  LIKE '%".$searchText."%'
-                            OR  BaseTbl.mobile  LIKE '%".$searchText."%')";
+            $likeCriteria = "( role LIKE '%".$searchText."%')";
             $this->db->where($likeCriteria);
         }
-        $this->db->where('BaseTbl.isDeleted', 0);
-        $this->db->where('BaseTbl.roleId !=', 1);
+        $this->db->where('isDeleted', 0);
+        $this->db->where('role !=','System Admin');
         $this->db->limit($page, $segment);
         $query = $this->db->get();
         
@@ -40,24 +35,24 @@ class User_model extends CI_Model
         return $result;
     }
     
-    function getUserRoles()
+    function getMemberRoles()
     {
-        $this->db->select('roleId, role');
-        $this->db->from('tbl_roles');
-        $this->db->where('roleId !=', 1);
+        $this->db->select('role');
+        $this->db->from('tbl_members');
+        $this->db->where('role !=','System Admin');
         $query = $this->db->get();
         
         return $query->result();
     }
 
-    function checkEmailExists($email, $userId = 0)
+    function checkEmailExists($email, $memberId = 0)
     {
         $this->db->select("email");
-        $this->db->from("tbl_users");
+        $this->db->from("tbl_members");
         $this->db->where("email", $email);   
         $this->db->where("isDeleted", 0);
-        if($userId != 0){
-            $this->db->where("userId !=", $userId);
+        if($memberId != 0){
+            $this->db->where("memberId !=", $memberId);
         }
         $query = $this->db->get();
 
@@ -65,10 +60,10 @@ class User_model extends CI_Model
     }
     
     
-    function addNewUser($userInfo)
+    function addNewMember($memberInfo)
     {
         $this->db->trans_start();
-        $this->db->insert('tbl_users', $userInfo);
+        $this->db->insert('tbl_members', $memberInfo);
         
         $insert_id = $this->db->insert_id();
         
@@ -77,50 +72,48 @@ class User_model extends CI_Model
         return $insert_id;
     }
     
-    function getUserInfo($userId)
+    function getMemberInfo($memberId)
     {
-        $this->db->select('userId, name, email, mobile, roleId');
-        $this->db->from('tbl_users');
+        $this->db->select('*');
+        $this->db->from('tbl_members');
         $this->db->where('isDeleted', 0);
-		$this->db->where('roleId !=', 1);
-        $this->db->where('userId', $userId);
+		$this->db->where('role !=','System Admin');
+        $this->db->where('memberId', $memberId);
         $query = $this->db->get();
         
         return $query->result();
     }
     
     
-    function editUser($userInfo, $userId)
+    function editMember($memberInfo, $memberId)
     {
-        $this->db->where('userId', $userId);
-        $this->db->update('tbl_users', $userInfo);
+        $this->db->where('memberId', $memberId);
+        $this->db->update('tbl_members', $memberInfo);
         
         return TRUE;
     }
     
-    
-    
-    function deleteUser($userId, $userInfo)
+    function deleteMember($memberId, $memberInfo)
     {
-        $this->db->where('userId', $userId);
-        $this->db->update('tbl_users', $userInfo);
+        $this->db->where('memberId', $memberId);
+        $this->db->update('tbl_members', $memberInfo);
         
         return $this->db->affected_rows();
     }
 
 
-    function matchOldPassword($userId, $oldPassword)
+    function matchOldPassword($memberId, $oldPassword)
     {
-        $this->db->select('userId, password');
-        $this->db->where('userId', $userId);        
+        $this->db->select('memberId, password');
+        $this->db->where('memberId', $userId);        
         $this->db->where('isDeleted', 0);
-        $query = $this->db->get('tbl_users');
+        $query = $this->db->get('tbl_members');
         
-        $user = $query->result();
+        $member = $query->result();
 
-        if(!empty($user)){
-            if(verifyHashedPassword($oldPassword, $user[0]->password)){
-                return $user;
+        if(!empty($member)){
+            if(verifyHashedPassword($oldPassword, $member[0]->password)){
+                return $member;
             } else {
                 return array();
             }
@@ -128,15 +121,13 @@ class User_model extends CI_Model
             return array();
         }
     }
-    
-    function changePassword($userId, $userInfo)
+  /*  
+    function changePassword($memberId, $memberInfo)
     {
-        $this->db->where('userId', $userId);
+        $this->db->where('memberId', $memberId);
         $this->db->where('isDeleted', 0);
-        $this->db->update('tbl_users', $userInfo);
+        $this->db->update('tbl_members', $memberInfo);
         
         return $this->db->affected_rows();
-    }
+    }*/
 }
-
-  

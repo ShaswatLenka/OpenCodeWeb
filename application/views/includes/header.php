@@ -8,6 +8,9 @@
     <link href="<?php echo base_url(); ?>assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />    
     <!-- FontAwesome 4.3.0 -->
     <link href="<?php echo base_url(); ?>assets/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    
+  <link rel="shortcut icon" href="<?php echo base_url('assetsWeb/favicon/favicon.png') ?>">
+
     <!-- Ionicons 2.0.0 -->
     <link href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css" />
     <!-- Theme style -->
@@ -35,9 +38,9 @@
         <!-- Logo -->
         <a href="<?php echo base_url(); ?>" class="logo">
           <!-- mini logo for sidebar mini 50x50 pixels -->
-          <span class="logo-mini"><b>CI</b>SA</span>
+          <span class="logo-mini"><b>OC</b>SA</span>
           <!-- logo for regular state and mobile devices -->
-          <span class="logo-lg"><b>OpenNews</b>SA</span>
+          <span class="logo-lg"><b>OpenCode</b>SA</span>
         </a>
         <!-- Header Navbar: style can be found in header.less -->
         <nav class="navbar navbar-static-top" role="navigation">
@@ -65,7 +68,7 @@
                   <!-- Menu Footer-->
                   <li class="user-footer">
                     <div class="pull-left">
-                      <a href="<?php echo base_url(); ?>loadChangePass" class="btn btn-default btn-flat"><i class="fa fa-key"></i> Change Password</a>
+                      <a href="<?php echo base_url(); ?>#" class="btn btn-default btn-flat"><i class="fa fa-key"></i> Change Password</a>
                     </div>
                     <div class="pull-right">
                       <a href="<?php echo base_url(); ?>logout" class="btn btn-default btn-flat"><i class="fa fa-sign-out"></i> Sign out</a>
@@ -92,7 +95,7 @@
             <li class="treeview">
               <a href="<?php echo base_url(); ?>addNewP" >
                 <i class="fa fa-plane"></i>
-                <span> Add New Post</span>
+                <span> Add New Project</span>
               </a>
             </li>
             <li class="treeview">
@@ -101,31 +104,27 @@
                 <span>Go to Home</span>
               </a>
             </li>
-            <?php
-            if($role == ROLE_ADMIN )
-            {
-            ?>
             <li class="treeview">
-              <a href="<?php echo base_url(); ?>postListing" >
+              <a href="<?php echo base_url(); ?>projectListing" >
                 <i class="fa fa-thumb-tack"></i>
-                <span>Browse Posts</span>
+                <span>Browse Projects</span>
               </a>
             </li>
             <li class="treeview">
-              <a href="<?php echo base_url(); ?>upload/image" >
+              <a href="<?php echo base_url(); ?>#" >
                 <i class="fa fa-upload"></i>
-                <span>Image Uploads</span>
+                <span>TODO</span>
               </a>
             </li>
             <?php
-            }
+            
             if($role == ROLE_ADMIN)
-            {
+            
             ?>
             <li class="treeview">
-              <a href="<?php echo base_url(); ?>userListing">
+              <a href="<?php echo base_url(); ?>team/members">
                 <i class="fa fa-users"></i>
-                <span>Users</span>
+                <span>Team Members</span>
               </a>
             </li>
             <li class="treeview">
@@ -134,9 +133,7 @@
                 <span>Reports</span>
               </a>
             </li>
-            <?php
-            }
-            ?>
+            
           </ul>
         </section>
         <!-- /.sidebar -->

@@ -8,23 +8,41 @@ if( ! defined('BASEPATH')) exit('No direct script access allowed');
 
 		public function home(){
 
-            $this->load->view('header');
-            $this->load->view('home');
-            $this->load->view('footer');
+            $this->load->view('templates/header');
+            $this->load->view('home/home');
+            $this->load->view('templates/footer');
 	}
 
         public function about(){
      
-            $this->load->view('header');
-            $this->load->view('about');
-            $this->load->view('footer');
+            $this->load->view('templates/header');
+            $this->load->view('others/about');
+            $this->load->view('templates/footer');
          }
         public function projects(){
 
-            $this->load->view('header');
-            $this->load->view('projects');
-            $this->load->view('footer');
-           }
+            $this->load->view('templates/header');
+            $this->load->view('others/projects');
+            $this->load->view('templates/footer');
+        }
+        public function chessbot(){
+
+            $this->load->view('templates/header');
+            $this->load->view('projects/chessbot');
+            $this->load->view('templates/footer');
+    }
+        public function minipaint(){
+
+            $this->load->view('templates/header');
+            $this->load->view('projects/minipaint');
+            $this->load->view('templates/footer');
+    }
+        public function saturday(){
+
+            $this->load->view('templates/header');
+            $this->load->view('projects/saturday');
+            $this->load->view('templates/footer');
+    }
 
         public function start_project(){
         $data = array();
@@ -55,15 +73,15 @@ if( ! defined('BASEPATH')) exit('No direct script access allowed');
         //load the view
     //    $this->load->view('users/opencode_register_page', $data);
     
-            $this->load->view('header');
-            $this->load->view('start_project',$data);
-            $this->load->view('footer');
+            $this->load->view('templates/header');
+            $this->load->view('others/start_project',$data);
+            $this->load->view('templates/footer');
            }
         public function team(){
 
-            $this->load->view('header');
-            $this->load->view('team');
-            $this->load->view('footer');
+            $this->load->view('templates/header');
+            $this->load->view('others/team');
+            $this->load->view('templates/footer');
            }
         public function userMessageListing(){
 
@@ -71,9 +89,9 @@ if( ! defined('BASEPATH')) exit('No direct script access allowed');
         
             $data["results"] = $this->Mopencode->getIdea($this->session->userdata('userId'));
             
-            $this->load->view('header');
-            $this->load->view('user_message',$data);
-            $this->load->view('footer');
+            $this->load->view('templates/header');
+            $this->load->view('others/user_message',$data);
+            $this->load->view('templates/footer');
            
     }
 
@@ -102,7 +120,7 @@ if( ! defined('BASEPATH')) exit('No direct script access allowed');
         $this->load->model('Mopencode');
     }
 
-	 public function account(){
+	/* public function account(){
         $data = array();
         if($this->session->userdata('isUserLoggedIn')){
             $data['Mopencode'] = $this->Mopencode->getRows(array('user_id'=>$this->session->userdata('userId')));
@@ -111,7 +129,7 @@ if( ! defined('BASEPATH')) exit('No direct script access allowed');
         }else{
             redirect('Opencode/login');
         }
-    }
+    }*/
      /*
      * User login
      */
