@@ -140,7 +140,7 @@
 						</div>
 					
 				<div class="col-md-4 col-sm-6">
-						<div class="team-section-grid" style="background-image: url(<?php echo base_url('assetsWeb/images/author-6.jpg')?>">
+						<div class="team-section-grid" style="background-image: url(<?php echo base_url('assetsWeb/images/malkhan.jpg')?>">
 							<div class="overlay-section">
 								<div class="desc">
 									<h3>Malkhan Singh</h3>

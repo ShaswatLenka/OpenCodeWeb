@@ -35,50 +35,53 @@
   	</div>
   </div>
             <br>
-            <br>
-
-
-        	
 			<div class="container">
 				<div class="row">
 					<div class="col-md-8 col-md-offset-2 animate-box text-center heading-section">
-                        <h2>Let's revolutionize the way we develop.</h2>
+                        <h2>Let's revolutionize the way we develop</h2>
 						<h3>The Official Open Source Society of NIT Rourkela</h3>
 					</div>
 				</div>
 
 				
             	<div class="row">
-            		<figure class="col-md-4 justify_text animate-box ">
-            		<br><br><br>
-						<p><strong>Whether you have started with the “hello world”, building the next Word Processor or building a product that would change the world…you are welcome to collaborate with us. Login, Start and represent the community!</strong></p> 
+            		<figure class="col-md-5 justify_text animate-box ">
+            		<br><br>
+						<p><strong>Whether you’ve just mastered how to make the computer output “Hello World,” assembling the modules for your next media player with your very own everything-neon interface, or have a half-baked idea for a potentially disruptive software solution in the pipeline, you are more than welcome to collaborate with us and take a step towards building the next big thing. Login, Fork, Code…that’s all there is.</strong></p> 
 						</figure>
 				
 
-					<div class="col-sm-8 animate-box img-centre">
+					<div class="col-sm-7 animate-box img-centre">
 						<img class="img-responsive" src="<?php echo base_url('assetsWeb/images/HelloWorld.jpg')?>"/>
             		</div>
             	</div>
             	
       
             	<div class="row">
-					<div class="col-sm-5 animate-box">
+					<div class="col-sm-7 animate-box">
+            <br><br>
 						<img class="img-responsive" src="<?php echo base_url('assetsWeb/images/Idea.jpg')?>"/>
 						<br>
             		</div> 
-            		<div class="col-sm-2"></div>
 
             		<div class="col-sm-5 justify_text animate-box">
             		<br><br>
-						<p><strong>Hey! OpenCode is interdisciplinary…  Don’t worry if coding is not fun for you…just send us your idea that can be developed into a product and get started!</strong></p> 
+						<p><strong>Hate Coding? Well here’s some news, OpenCode is not just a society of developers. It’s a society of people across the entire spectrum of disciplines. It’s a place where a member is exposed to all aspects of development, right from drawing out Use Cases and Sequence Diagrams, to writing out Test Cases and plotting Bug Models. See, no coding anywhere yet. UX/UI design and Technical Writing are some of the more diverse fields. In short, if you have an idea or can implement an existing idea in an optimised way, this is just the place for you.</strong></p> 
             		</div>
             	</div>
+
             <br>
             	<div class="row">
-            		<div class="col-sm-4 justify_text animate-box">
-						<p><strong>Join Us and be a part of the rapidly growing Open Source community of software developers, robotolics, product developers and designers!</strong></p>            			
-            		</div>
-            	</div>
+                <figure class="col-md-5 justify_text animate-box ">
+                <br><br><br>
+            <p><strong>Join us and be a part of the rapidly growing Open Source community of Creative Coders, Roboticists, Product Developers, UX/UI Designers and yes…. Developers. Get mentored and take the highway to effective and professional software development. Witness your ideas materialize into actual usable consumer-grade products.</strong></p> 
+            </figure>
+        
+            <div class = "col-sm-1"></div>
+          <div class="col-sm-6 animate-box img-centre">
+            <img class="img-responsive" src="<?php echo base_url('assetsWeb/images/Workflow.png')?>"/>
+                </div>
+              </div>
             <br><br><br>
             <div id="fh5co-services-section">
 				<div class="row">
