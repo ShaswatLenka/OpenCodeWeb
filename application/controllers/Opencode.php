@@ -63,7 +63,7 @@ if( ! defined('BASEPATH')) exit('No direct script access allowed');
                 $insert = $this->Mopencode->insertIdea($userData);
                 if($insert){
                     $this->session->set_userdata('success_msg', 'Your idea submittet successfully.');
-                    redirect('Opencode/user_message');
+                    redirect('Opencode/userMessageListing');
                 }else{
                     $data['error_msg'] = 'Some problems occured, please try again.';
                 }

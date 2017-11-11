@@ -76,7 +76,7 @@
 		<header>
 			<div class="container">
 				<div class="fh5co-navbar-brand">
-					<a class="fh5co-logo" href="#">Open<strong>Code</strong></a>
+					<a class="fh5co-logo" href="<?php echo base_url(); ?>Opencode/home">Open<strong>Code</strong></a>
 				</div>
 				<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>
 			</div>
