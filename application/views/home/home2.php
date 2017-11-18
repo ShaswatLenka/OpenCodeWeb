@@ -1,2 +1,0 @@
-			<p class = "col-sm-2"><a href = "<?php echo base_url(); ?>user/login"><strong>Login</strong></a></p>
-  			<p class = "col-sm-2"><a href = "<?php echo base_url(); ?>user/registration"><strong>Register</strong></a></p>
