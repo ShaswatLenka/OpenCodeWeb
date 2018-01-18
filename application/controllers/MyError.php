@@ -3,7 +3,7 @@
 /**
  * Class : Login (LoginController)
  */
-class Error extends CI_Controller
+class MyError extends CI_Controller
 {
     /**
      * This is default constructor of the class

@@ -22,7 +22,7 @@ $route['user/emailChecking'] = 'Opencode/email_check';
 
 $route['upload/image'] = 'upload';
 
-$route['404_override'] = 'error';
+$route['404_override'] = 'MyError';
 
 
 /*********** ROUTES FOR ADMIN PANEL *******************/
